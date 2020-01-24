@@ -17,8 +17,6 @@
 		CE5A658C23DAE6A100ECE4AD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A658B23DAE6A100ECE4AD /* TableViewController.swift */; };
 		CE5A658E23DAEA6100ECE4AD /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A658D23DAEA6100ECE4AD /* Interactor.swift */; };
 		CE5A659023DAEA9500ECE4AD /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A658F23DAEA9500ECE4AD /* Presenter.swift */; };
-		CE5A659223DAEB1D00ECE4AD /* InteractorProtocolInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A659123DAEB1D00ECE4AD /* InteractorProtocolInput.swift */; };
-		CE5A659423DAEBFF00ECE4AD /* InteractorProtocolOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A659323DAEBFF00ECE4AD /* InteractorProtocolOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +44,6 @@
 		CE5A658B23DAE6A100ECE4AD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CE5A658D23DAEA6100ECE4AD /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		CE5A658F23DAEA9500ECE4AD /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		CE5A659123DAEB1D00ECE4AD /* InteractorProtocolInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorProtocolInput.swift; sourceTree = "<group>"; };
-		CE5A659323DAEBFF00ECE4AD /* InteractorProtocolOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorProtocolOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				CE5A658F23DAEA9500ECE4AD /* Presenter.swift */,
-				CE5A659123DAEB1D00ECE4AD /* InteractorProtocolInput.swift */,
-				CE5A659323DAEBFF00ECE4AD /* InteractorProtocolOutput.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -255,14 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5A659223DAEB1D00ECE4AD /* InteractorProtocolInput.swift in Sources */,
 				CE5A659023DAEA9500ECE4AD /* Presenter.swift in Sources */,
 				CE5A656323D9BCFD00ECE4AD /* AppDelegate.swift in Sources */,
 				CE5A656523D9BCFD00ECE4AD /* SceneDelegate.swift in Sources */,
 				CE5A658E23DAEA6100ECE4AD /* Interactor.swift in Sources */,
 				CE5A658A23DAE63B00ECE4AD /* Routing.swift in Sources */,
 				CE5A658C23DAE6A100ECE4AD /* TableViewController.swift in Sources */,
-				CE5A659423DAEBFF00ECE4AD /* InteractorProtocolOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
