@@ -7,7 +7,7 @@
 //
 
 struct Presenter {
-    var view:TableViewController?
+    var view:LocationTableViewController?
     var interactor: Interactor?
     var routing: Routing?
 }

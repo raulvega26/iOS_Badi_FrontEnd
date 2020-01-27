@@ -10,7 +10,7 @@ import UIKit
 
 class Routing {
     
-    let vc: TableViewController = TableViewController()
+    let vc: LocationTableViewController = LocationTableViewController()
     var presenter = Presenter()
     let interactor = Interactor()
     var navigationController: UINavigationController?
