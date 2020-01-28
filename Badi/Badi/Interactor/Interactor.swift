@@ -8,4 +8,11 @@
 
 class Interactor {
     var presenter: Presenter?
+    
+    
+    func requestAddress(address: String) {
+        
+    }
+    
+    
 }

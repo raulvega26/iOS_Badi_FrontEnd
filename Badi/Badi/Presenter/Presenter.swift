@@ -7,7 +7,14 @@
 //
 
 struct Presenter {
-    var view:LocationTableViewController?
+    var view: LocationTableViewController?
     var interactor: Interactor?
     var routing: Routing?
+    
+    func searchByTyping(request: String) -> String{
+        
+        interactor.requestAddress(address: request)
+        
+        return ""
+    }
 }

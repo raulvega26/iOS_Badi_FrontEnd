@@ -16,7 +16,7 @@ class LocationTableViewController: UITableViewController {
     let filtered = LocationFilteredTableViewController()
     private lazy var searchController: UISearchController = {
         let s = UISearchController(searchResultsController: filtered)
-        s.searchResultsUpdater = self as? UISearchResultsUpdating
+        s.searchResultsUpdater = self as UISearchResultsUpdating
         return s
     }()
     
@@ -28,8 +28,6 @@ class LocationTableViewController: UITableViewController {
         
         navigationItem.searchController = searchController
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
-        
-        
     }
 }
 
@@ -48,9 +46,18 @@ extension LocationTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        
-
         return cell
     }
     
+}
+
+extension LocationTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if searchController.searchBar.text!.count > 2 {
+            print(searchController.searchBar.text!)
+            _ = presenter?.searchByTyping(request: searchController.searchBar.text!)
+        }
+        
+        //filtered.posts = provider.posts.filter{ $0.title.lowercased().contains(with: searchController.searchBar.text!.lowercased()) }
+    }
 }
