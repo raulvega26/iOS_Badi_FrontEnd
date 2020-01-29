@@ -24,4 +24,19 @@ class Routing {
         navigationController = UINavigationController(rootViewController: vc)
     }
     
+    /*
+    func suggestionAddress(adressesArray: Array<Address>, filterString: String, sugFiltController: SuggestionAddressTableViewController){
+        let sAVC: SuggestionAddressTableViewController = SuggestionAddressTableViewController()
+        
+        sugFiltController.adresses = adressesArray.filter{ $0.title.lowercased().starts(with: filterString.lowercased()) }
+        
+    } */
+    
+    func suggestionAddress(addressesArray: Array<Post>, filterString: String, sugFiltController: SuggestionAddressTableViewController){
+        
+        sugFiltController.posts = addressesArray.filter{ $0.title.lowercased().contains(filterString.lowercased())
+            
+        }
+        
+    }
 }

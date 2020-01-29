@@ -8,9 +8,16 @@
 
 import UIKit
 
-class LocationFilteredTableViewController: UITableViewController {
+class SuggestionAddressTableViewController: UITableViewController {
     // var posts = [Any]()
-    var posts = [Any]() {
+    /*
+    var adresses = [Address]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }*/
+    
+    var posts = [Post]() {
         didSet {
             tableView.reloadData()
         }
@@ -28,14 +35,14 @@ class LocationFilteredTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
+        // return addresses.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
-//        cell.textLabel?.text = posts[indexPath.row].title
-//        cell.backgroundColor = .red
+        cell.textLabel?.text = posts[indexPath.row].title
         
         return cell
     }

@@ -6,15 +6,17 @@
 //  Copyright © 2020 Raul. All rights reserved.
 //
 
-struct Presenter {
+class Presenter {
     var view: LocationTableViewController?
     var interactor: Interactor?
     var routing: Routing?
     
-    func searchByTyping(request: String) -> String{
+    func searchByTyping(request: String, suggestionFiltered: SuggestionAddressTableViewController){
+        print("Presenter: \(request)")
         
-        interactor.requestAddress(address: request)
+        let addresses = interactor!.requestAddress(address: request)
         
-        return ""
+        routing?.suggestionAddress(addressesArray: addresses as! Array<Post>, filterString: request, sugFiltController: suggestionFiltered)
+        
     }
 }

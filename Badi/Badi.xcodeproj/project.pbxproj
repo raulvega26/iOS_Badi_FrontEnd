@@ -17,7 +17,11 @@
 		CE5A658C23DAE6A100ECE4AD /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A658B23DAE6A100ECE4AD /* LocationTableViewController.swift */; };
 		CE5A658E23DAEA6100ECE4AD /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A658D23DAEA6100ECE4AD /* Interactor.swift */; };
 		CE5A659023DAEA9500ECE4AD /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A658F23DAEA9500ECE4AD /* Presenter.swift */; };
-		CE5A659823DF542700ECE4AD /* LocationFilteredTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A659723DF542700ECE4AD /* LocationFilteredTableViewController.swift */; };
+		CE5A659823DF542700ECE4AD /* SuggestionAddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A659723DF542700ECE4AD /* SuggestionAddressTableViewController.swift */; };
+		CE5A659A23E05F4C00ECE4AD /* DataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A659923E05F4C00ECE4AD /* DataRetriever.swift */; };
+		CE5A659C23E0635F00ECE4AD /* URLSessionDataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A659B23E0635F00ECE4AD /* URLSessionDataRetriever.swift */; };
+		CE5A659E23E0643200ECE4AD /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A659D23E0643200ECE4AD /* Address.swift */; };
+		CE5A65A223E0688C00ECE4AD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65A123E0688C00ECE4AD /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +49,11 @@
 		CE5A658B23DAE6A100ECE4AD /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		CE5A658D23DAEA6100ECE4AD /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		CE5A658F23DAEA9500ECE4AD /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		CE5A659723DF542700ECE4AD /* LocationFilteredTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFilteredTableViewController.swift; sourceTree = "<group>"; };
+		CE5A659723DF542700ECE4AD /* SuggestionAddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionAddressTableViewController.swift; sourceTree = "<group>"; };
+		CE5A659923E05F4C00ECE4AD /* DataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetriever.swift; sourceTree = "<group>"; };
+		CE5A659B23E0635F00ECE4AD /* URLSessionDataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataRetriever.swift; sourceTree = "<group>"; };
+		CE5A659D23E0643200ECE4AD /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		CE5A65A123E0688C00ECE4AD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5A658B23DAE6A100ECE4AD /* LocationTableViewController.swift */,
-				CE5A659723DF542700ECE4AD /* LocationFilteredTableViewController.swift */,
+				CE5A659723DF542700ECE4AD /* SuggestionAddressTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +139,10 @@
 		CE5A658623DAE4FF00ECE4AD /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				CE5A659923E05F4C00ECE4AD /* DataRetriever.swift */,
+				CE5A659B23E0635F00ECE4AD /* URLSessionDataRetriever.swift */,
+				CE5A659D23E0643200ECE4AD /* Address.swift */,
+				CE5A65A123E0688C00ECE4AD /* Post.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -252,8 +264,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5A659823DF542700ECE4AD /* LocationFilteredTableViewController.swift in Sources */,
+				CE5A659A23E05F4C00ECE4AD /* DataRetriever.swift in Sources */,
+				CE5A65A223E0688C00ECE4AD /* Post.swift in Sources */,
+				CE5A659823DF542700ECE4AD /* SuggestionAddressTableViewController.swift in Sources */,
 				CE5A659023DAEA9500ECE4AD /* Presenter.swift in Sources */,
+				CE5A659C23E0635F00ECE4AD /* URLSessionDataRetriever.swift in Sources */,
+				CE5A659E23E0643200ECE4AD /* Address.swift in Sources */,
 				CE5A656323D9BCFD00ECE4AD /* AppDelegate.swift in Sources */,
 				CE5A656523D9BCFD00ECE4AD /* SceneDelegate.swift in Sources */,
 				CE5A658E23DAEA6100ECE4AD /* Interactor.swift in Sources */,

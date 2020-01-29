@@ -13,7 +13,7 @@ class LocationTableViewController: UITableViewController {
     var presenter: Presenter?
     private var activityIndicator = UIActivityIndicatorView(style: .medium)
     
-    let filtered = LocationFilteredTableViewController()
+    let filtered = SuggestionAddressTableViewController()
     private lazy var searchController: UISearchController = {
         let s = UISearchController(searchResultsController: filtered)
         s.searchResultsUpdater = self as UISearchResultsUpdating
@@ -55,7 +55,9 @@ extension LocationTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         if searchController.searchBar.text!.count > 2 {
             print(searchController.searchBar.text!)
-            _ = presenter?.searchByTyping(request: searchController.searchBar.text!)
+            presenter?.searchByTyping(request: searchController.searchBar.text!, suggestionFiltered: filtered)
+        } else {
+            filtered.posts = []
         }
         
         //filtered.posts = provider.posts.filter{ $0.title.lowercased().contains(with: searchController.searchBar.text!.lowercased()) }
