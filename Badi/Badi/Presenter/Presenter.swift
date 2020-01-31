@@ -11,12 +11,39 @@ class Presenter {
     var interactor: Interactor?
     var routing: Routing?
     
+    var viewRoom: RoomListTableViewController?
+    
+    var roomsArray: Array<Room> = []
+    
+    func initAPILocation(){
+        interactor?.callAPILocation()
+    }
+    
     func searchByTyping(request: String, suggestionFiltered: SuggestionAddressTableViewController){
-        print("Presenter: \(request)")
+        var stringAddresses = [String]()
         
-        let addresses = interactor!.requestAddress(address: request)
+        interactor!.requestAddress(address: request)
         
-        routing?.suggestionAddress(addressesArray: addresses as! Array<Post>, filterString: request, sugFiltController: suggestionFiltered)
+        let direccions = (interactor?.address.filter{ $0.name.lowercased().contains(request.lowercased())
+            })!
         
+        for dir in direccions {
+            stringAddresses.append(dir.name)
+        }
+        
+        routing?.suggestionAddress(addressesArray: stringAddresses , sugFiltController: suggestionFiltered)
+    }
+    
+    func addressSelected(address: String) {
+        
+        /* let addressStruct = addressArray.filter{$0.title.lowercased().starts(with: address)}
+        
+        print(addressStruct) */
+        
+//        roomsArray = interactor!.requestAddress(
+        
+        // routing?.goToRoomList(roomsArray)
+        /* self.navigationController?.pushViewController(roomListTableViewController, animated: true)
+        */
     }
 }

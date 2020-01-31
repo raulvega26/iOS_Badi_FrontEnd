@@ -13,6 +13,7 @@ class Routing {
     let vc: LocationTableViewController = LocationTableViewController()
     var presenter = Presenter()
     let interactor = Interactor()
+    
     var navigationController: UINavigationController?
     
     init () {
@@ -32,11 +33,13 @@ class Routing {
         
     } */
     
-    func suggestionAddress(addressesArray: Array<Post>, filterString: String, sugFiltController: SuggestionAddressTableViewController){
-        
-        sugFiltController.posts = addressesArray.filter{ $0.title.lowercased().contains(filterString.lowercased())
-            
-        }
+    func suggestionAddress(addressesArray: Array<String>, sugFiltController: SuggestionAddressTableViewController){
+        sugFiltController.posts = addressesArray
+    }
+    
+    func goToRoomList(rooms: Array<Post>) {
+        let roomList = RoomListTableViewController()
+       
         
     }
 }

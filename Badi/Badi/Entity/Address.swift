@@ -9,10 +9,10 @@
 import Foundation
 
 struct Address: Codable {
-    var nom: String
-    var ciutat: String
-    var x0: Double
-    var x1: Double
-    var y0: Double
-    var y1: Double
+    var name: String 
+    var city: String
+    var topleft_lon: Double
+    var topleft_lat: Double
+    var btmright_lon: Double
+    var btmright_lat: Double
 }

@@ -21,7 +21,7 @@ struct URLSessionDataRetriever: DataRetriever {
                 let json = try JSONDecoder().decode(T.self, from: d)
                 completionBlock(Result.success(json))
             } catch {
-                completionBlock(Result.failure(NSError(domain: "tech.atlabs.Christmapps.URLSessionDataRetriever.error", code: 500, userInfo: [:])))
+                completionBlock(Result.failure(NSError(domain: "Badi.URLSessionDataRetriever.error", code: 500, userInfo: [:])))
             }
         }
         task.resume()

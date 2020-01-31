@@ -17,7 +17,7 @@ class SuggestionAddressTableViewController: UITableViewController {
         }
     }*/
     
-    var posts = [Post]() {
+    var posts = [String]() {
         didSet {
             tableView.reloadData()
         }
@@ -42,7 +42,7 @@ class SuggestionAddressTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
-        cell.textLabel?.text = posts[indexPath.row].title
+        cell.textLabel?.text = posts[indexPath.row]
         
         return cell
     }
