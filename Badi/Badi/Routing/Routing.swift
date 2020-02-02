@@ -30,16 +30,17 @@ class Routing {
         let sAVC: SuggestionAddressTableViewController = SuggestionAddressTableViewController()
         
         sugFiltController.adresses = adressesArray.filter{ $0.title.lowercased().starts(with: filterString.lowercased()) }
-        
     } */
     
     func suggestionAddress(addressesArray: Array<String>, sugFiltController: SuggestionAddressTableViewController){
-        sugFiltController.posts = addressesArray
+        sugFiltController.address = addressesArray
     }
     
-    func goToRoomList(rooms: Array<Post>) {
-        let roomList = RoomListTableViewController()
-       
+    func goToRoomList(rooms: Array<String>) {
+        let roomList = RoomListTableViewController(rooms: rooms)
+        print("Routing\(rooms)")
+        navigationController?.show(roomList, sender: true)
         
+        // present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil)
     }
 }

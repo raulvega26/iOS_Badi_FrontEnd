@@ -15,10 +15,6 @@ class Presenter {
     
     var roomsArray: Array<Room> = []
     
-    func initAPILocation(){
-        interactor?.callAPILocation()
-    }
-    
     func searchByTyping(request: String, suggestionFiltered: SuggestionAddressTableViewController){
         var stringAddresses = [String]()
         
@@ -35,15 +31,10 @@ class Presenter {
     }
     
     func addressSelected(address: String) {
+        print("Presenter\(address)")
+        let rooms = (interactor?.requestRooms(addressRequest: address))!
         
-        /* let addressStruct = addressArray.filter{$0.title.lowercased().starts(with: address)}
+        routing?.goToRoomList(rooms: rooms)
         
-        print(addressStruct) */
-        
-//        roomsArray = interactor!.requestAddress(
-        
-        // routing?.goToRoomList(roomsArray)
-        /* self.navigationController?.pushViewController(roomListTableViewController, animated: true)
-        */
     }
 }

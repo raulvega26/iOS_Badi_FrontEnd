@@ -8,9 +8,19 @@
 
 import UIKit
 
-class LocationTableViewController: UITableViewController {
-
+class LocationTableViewController: UITableViewController, AddressResultsDelegate {
+    
+    
     var presenter: Presenter?
+    
+    
+    func addressResultSelected(_ address: String) {
+        
+        print("arriba a fer click 2")
+        presenter?.addressSelected(address: address)
+    }
+    
+    
     private var activityIndicator = UIActivityIndicatorView(style: .medium)
     
     let filtered = SuggestionAddressTableViewController()
@@ -23,15 +33,12 @@ class LocationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter?.initAPILocation()
-        
+        filtered.delegate = self
         let cancelButton = UIBarButtonItem(customView: activityIndicator)
         navigationItem.rightBarButtonItem = cancelButton
         
         navigationItem.searchController = searchController
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
-        
-        
     }
 }
 
@@ -51,11 +58,6 @@ extension LocationTableViewController {
 
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        self.presenter?.addressSelected(address: filtered.posts[indexPath.row])
-    }
 }
 
 extension LocationTableViewController: UISearchResultsUpdating {
@@ -63,7 +65,7 @@ extension LocationTableViewController: UISearchResultsUpdating {
         if searchController.searchBar.text!.count > 2 {
             presenter?.searchByTyping(request: searchController.searchBar.text!, suggestionFiltered: filtered)
         } else {
-            filtered.posts = []
+            filtered.address = []
         }
         
         //filtered.posts = provider.posts.filter{ $0.title.lowercased().contains(with: searchController.searchBar.text!.lowercased()) }

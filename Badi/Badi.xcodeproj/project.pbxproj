@@ -27,6 +27,7 @@
 		CE5A65A923E1E0DE00ECE4AD /* RoomListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65A723E1E0DE00ECE4AD /* RoomListTableViewCell.swift */; };
 		CE5A65AA23E1E0DE00ECE4AD /* RoomListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A65A823E1E0DE00ECE4AD /* RoomListTableViewCell.xib */; };
 		CE5A65AC23E1E50000ECE4AD /* LocationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65AB23E1E50000ECE4AD /* LocationsResponse.swift */; };
+		CE5A65AE23E5FBAE00ECE4AD /* AddressResultsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65AD23E5FBAE00ECE4AD /* AddressResultsDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		CE5A65A723E1E0DE00ECE4AD /* RoomListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListTableViewCell.swift; sourceTree = "<group>"; };
 		CE5A65A823E1E0DE00ECE4AD /* RoomListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomListTableViewCell.xib; sourceTree = "<group>"; };
 		CE5A65AB23E1E50000ECE4AD /* LocationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsResponse.swift; sourceTree = "<group>"; };
+		CE5A65AD23E5FBAE00ECE4AD /* AddressResultsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResultsDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				CE5A658B23DAE6A100ECE4AD /* LocationTableViewController.swift */,
 				CE5A659723DF542700ECE4AD /* SuggestionAddressTableViewController.swift */,
 				CE5A65A323E18E2B00ECE4AD /* RoomListTableViewController.swift */,
+				CE5A65AD23E5FBAE00ECE4AD /* AddressResultsDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				CE5A65A923E1E0DE00ECE4AD /* RoomListTableViewCell.swift in Sources */,
 				CE5A65A623E1B0E100ECE4AD /* Room.swift in Sources */,
 				CE5A659E23E0643200ECE4AD /* Address.swift in Sources */,
+				CE5A65AE23E5FBAE00ECE4AD /* AddressResultsDelegate.swift in Sources */,
 				CE5A656323D9BCFD00ECE4AD /* AppDelegate.swift in Sources */,
 				CE5A656523D9BCFD00ECE4AD /* SceneDelegate.swift in Sources */,
 				CE5A658E23DAEA6100ECE4AD /* Interactor.swift in Sources */,

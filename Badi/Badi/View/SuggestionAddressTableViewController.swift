@@ -9,15 +9,9 @@
 import UIKit
 
 class SuggestionAddressTableViewController: UITableViewController {
-    // var posts = [Any]()
-    /*
-    var adresses = [Address]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }*/
     
-    var posts = [String]() {
+    var delegate:AddressResultsDelegate?
+    var address = [String]() {
         didSet {
             tableView.reloadData()
         }
@@ -34,16 +28,21 @@ class SuggestionAddressTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
-        // return addresses.count
+        return address.count
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
-        cell.textLabel?.text = posts[indexPath.row]
+        cell.textLabel?.text = address[indexPath.row]
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("arriba a fer click 1")
+        delegate?.addressResultSelected(address[indexPath.row])
+        print("bad point")
     }
 }
