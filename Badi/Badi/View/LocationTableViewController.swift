@@ -16,14 +16,13 @@ class LocationTableViewController: UITableViewController, AddressResultsDelegate
     
     func addressResultSelected(_ address: String) {
         
-        print("arriba a fer click 2")
         presenter?.addressSelected(address: address)
     }
     
     
     private var activityIndicator = UIActivityIndicatorView(style: .medium)
     
-    let filtered = SuggestionAddressTableViewController()
+    private let filtered = SuggestionAddressTableViewController()
     private lazy var searchController: UISearchController = {
         let s = UISearchController(searchResultsController: filtered)
         s.searchResultsUpdater = self as UISearchResultsUpdating

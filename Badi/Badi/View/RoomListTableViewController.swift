@@ -9,11 +9,11 @@
 import UIKit
 
 class RoomListTableViewController: UITableViewController {
-    var pictures = ["room.jpeg","room2.jpg","room3.jpg","room4.jpg"]
-    var user_details = ["Raul, 25", "Irati, 25", "Didac, 23", "Joan, 25"]
+    private var pictures = ["room.jpeg","room2.jpg","room3.jpg","room4.jpg"]
+    private var user_details = ["Raul, 25", "Irati, 25", "Didac, 23", "Joan, 25"]
     // var descriptions = ["habitacion individual", "habitacion doble", "habitacion individual", "habitacion doble"]
-    var prices = ["320 €/mes", "550 €/mes", "700 €/mes", "680 €/mes"]
-    var room_descriptions = [String]()
+    private var prices = ["320 €/mes", "550 €/mes", "700 €/mes", "680 €/mes"]
+    private var room_descriptions = [String]()
     
     init(rooms: Array<String>) {
         room_descriptions = rooms
@@ -33,8 +33,8 @@ class RoomListTableViewController: UITableViewController {
         let items = try! fm.contentsOfDirectory(atPath: path)
         */
         
-        tableView.register(UINib(nibName: "RoomListTableViewCell", bundle: nil), forCellReuseIdentifier: "reuseIdentifier")
-        
+        // tableView.register(UINib(nibName: "RoomListTableViewCell", bundle: nil), forCellReuseIdentifier: "reuseIdentifier")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
     }
 }
 
@@ -50,13 +50,11 @@ extension RoomListTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        
         return pictures.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! RoomListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         let image = UIImage (named: pictures[indexPath.row]) /*
         cell.roomImage.image = image

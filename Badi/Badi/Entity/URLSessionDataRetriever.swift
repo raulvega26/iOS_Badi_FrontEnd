@@ -12,7 +12,8 @@ struct URLSessionDataRetriever: DataRetriever {
     func retrieve<T>(url: String,
                      method: String,
                      _ completionBlock: @escaping (Result<T, Error>) -> Void) where T : Decodable, T : Encodable {
-        guard let url = URL(string: url) else { assertionFailure("WRONG URL FORMAT"); return }
+        guard let url = URL(string: url) else {
+            assertionFailure("WRONG URL FORMAT"); return }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let e = error { completionBlock(Result.failure(e)); return }
