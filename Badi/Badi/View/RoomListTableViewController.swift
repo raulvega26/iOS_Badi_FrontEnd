@@ -58,12 +58,13 @@ extension RoomListTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! RoomListTableViewCell
 
-        let image = UIImage (named: pictures[indexPath.row]) /*
-        cell.roomImage.image = image
-        cell.userData.text = user_details[indexPath.row]
-        cell.informationRoom.text = descriptions[indexPath.row]
-        cell.priceRent.text = prices[indexPath.row]
-        */
+        let image = UIImage (named: pictures[indexPath.row])
+        
+        cell.imageRoom.image = image
+        cell.userInformation.text = user_details[indexPath.row]
+        cell.roomDescription.text = room_descriptions[indexPath.row]
+        cell.price.text = prices[indexPath.row]
+    
         return cell
     }
 }
