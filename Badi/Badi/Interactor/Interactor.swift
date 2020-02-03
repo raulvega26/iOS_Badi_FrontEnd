@@ -15,12 +15,13 @@ class Interactor {
     func requestAddress(address: String){
         
         let addressUrl = address.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-
+        
         dataRetriever.retrieve(url: "http://3.82.105.143:3000/V1/search?text=\(addressUrl)", method: "GET") { (result: Result<LocationsResponse, Error>) in
             switch result {
                 case .success(let response):
                     DispatchQueue.main.async {
                         self.address = response.locations
+                        print(response.locations)
                     }
                     
                 case .failure(let error):
