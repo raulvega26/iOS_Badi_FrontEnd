@@ -10,9 +10,10 @@ import UIKit
 
 class Routing {
     
-    let vc: TableViewController = TableViewController()
+    let vc: LocationTableViewController = LocationTableViewController()
     var presenter = Presenter()
     let interactor = Interactor()
+    
     var navigationController: UINavigationController?
     
     init () {
@@ -24,4 +25,12 @@ class Routing {
         navigationController = UINavigationController(rootViewController: vc)
     }
     
+    func suggestionAddress(addressesArray: Array<String>, suggestionFilterController: SuggestionAddressTableViewController){
+        suggestionFilterController.address = addressesArray
+    }
+    
+    func goToRoomList(rooms: Array<String>) {
+        let roomList = RoomListTableViewController(rooms: rooms)
+        navigationController?.present(roomList, animated: true)
+    }
 }

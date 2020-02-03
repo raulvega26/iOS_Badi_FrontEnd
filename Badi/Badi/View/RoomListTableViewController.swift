@@ -1,0 +1,67 @@
+//
+//  RoomListTableViewController.swift
+//  Badi
+//
+//  Created by user on 29/01/2020.
+//  Copyright © 2020 Raul. All rights reserved.
+//
+
+import UIKit
+
+class RoomListTableViewController: UITableViewController {
+    private var pictures = ["room.jpeg","room2.jpg","room3.jpg","room4.jpg"]
+    private var user_details = ["Raul, 25", "Irati, 25", "Didac, 23", "Joan, 25"]
+    // var descriptions = ["habitacion individual", "habitacion doble", "habitacion individual", "habitacion doble"]
+    private var prices = ["320 €/mes", "550 €/mes", "700 €/mes", "680 €/mes"]
+    private var room_descriptions = [String]()
+    
+    init(rooms: Array<String>) {
+        room_descriptions = rooms
+        super.init(style: .plain)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.title = "Room List"
+        /*
+        let fm = FileManager.default
+        let path = Bundle.main.resourcePath!
+        let items = try! fm.contentsOfDirectory(atPath: path)
+        */
+        
+        // tableView.register(UINib(nibName: "RoomListTableViewCell", bundle: nil), forCellReuseIdentifier: "reuseIdentifier")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+    }
+}
+
+extension RoomListTableViewController {
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 350//Choose your custom row height
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pictures.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        let image = UIImage (named: pictures[indexPath.row]) /*
+        cell.roomImage.image = image
+        cell.userData.text = user_details[indexPath.row]
+        cell.informationRoom.text = descriptions[indexPath.row]
+        cell.priceRent.text = prices[indexPath.row]
+        */
+        return cell
+    }
+}
