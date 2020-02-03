@@ -57,12 +57,12 @@ extension RoomListTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         let image = UIImage (named: pictures[indexPath.row])
-        
-        cell.imageRoom.image = image
-        cell.userInformation.text = user_details[indexPath.row]
-        cell.roomDescription.text = room_descriptions[indexPath.row]
-        cell.price.text = prices[indexPath.row]
-    
+//
+//        cell.imageRoom.image = image
+//        cell.userInformation.text = user_details[indexPath.row]
+//        cell.roomDescription.text = room_descriptions[indexPath.row]
+//        cell.price.text = prices[indexPath.row]
+//
         return cell
     }
 }
