@@ -12,7 +12,8 @@ struct URLSessionDataRetriever: DataRetriever {
     func retrieve<T>(url: String,
                      method: String,
                      _ completionBlock: @escaping (Result<T, Error>) -> Void) where T : Decodable, T : Encodable {
-        guard let url = URL(string: url) else { assertionFailure("WRONG URL FORMAT"); return }
+        guard let url = URL(string: url) else {
+            assertionFailure("WRONG URL FORMAT"); return }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let e = error { completionBlock(Result.failure(e)); return }
@@ -21,7 +22,7 @@ struct URLSessionDataRetriever: DataRetriever {
                 let json = try JSONDecoder().decode(T.self, from: d)
                 completionBlock(Result.success(json))
             } catch {
-                completionBlock(Result.failure(NSError(domain: "Badi.URLSessionDataRetriever.error", code: 500, userInfo: [:])))
+                completionBlock(Result.failure(NSError(domain: "Badi.URLSessionDataRetriever.error", code: 500, userInfo: ["Can't reach server":"Currently it is impossible to reach the server, try again later"])))
             }
         }
         task.resume()

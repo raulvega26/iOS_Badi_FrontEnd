@@ -41,8 +41,6 @@ class SuggestionAddressTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print("arriba a fer click 1")
         delegate?.addressResultSelected(address[indexPath.row])
-        print("bad point")
     }
 }

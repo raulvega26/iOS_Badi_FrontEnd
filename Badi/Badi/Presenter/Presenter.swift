@@ -15,7 +15,7 @@ class Presenter {
     
     var roomsArray: Array<Room> = []
     
-    func searchByTyping(request: String, suggestionFiltered: SuggestionAddressTableViewController){
+    func searchByTyping(request: String, suggestionFiltered: SuggestionAddressTableViewController) {
         var stringAddresses = [String]()
         
         interactor!.requestAddress(address: request)
@@ -23,15 +23,12 @@ class Presenter {
         let direccions = (interactor?.address.filter{ $0.name.lowercased().contains(request.lowercased())
             })!
         
-        for dir in direccions {
-            stringAddresses.append(dir.name)
-        }
+        stringAddresses = direccions.map { $0.name }
         
-        routing?.suggestionAddress(addressesArray: stringAddresses , sugFiltController: suggestionFiltered)
+        routing?.suggestionAddress(addressesArray: stringAddresses , suggestionFilterController: suggestionFiltered)
     }
     
     func addressSelected(address: String) {
-        print("Presenter\(address)")
         let rooms = (interactor?.requestRooms(addressRequest: address))!
         
         routing?.goToRoomList(rooms: rooms)
