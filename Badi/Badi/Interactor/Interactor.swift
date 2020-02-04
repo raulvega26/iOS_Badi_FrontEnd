@@ -21,7 +21,6 @@ class Interactor {
                 case .success(let response):
                     DispatchQueue.main.async {
                         self.address = response.locations
-                        print(response.locations)
                     }
                     
                 case .failure(let error):

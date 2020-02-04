@@ -10,6 +10,12 @@ import UIKit
 
 class RoomListTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var roomImage: UIImageView!
+    @IBOutlet weak var userInformation: UILabel!
+    @IBOutlet weak var roomInformation: UILabel!
+    @IBOutlet weak var price: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

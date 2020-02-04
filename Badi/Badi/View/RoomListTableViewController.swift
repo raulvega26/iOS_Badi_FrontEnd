@@ -33,8 +33,8 @@ class RoomListTableViewController: UITableViewController {
         let items = try! fm.contentsOfDirectory(atPath: path)
         */
         
-        // tableView.register(UINib(nibName: "RoomListTableViewCell", bundle: nil), forCellReuseIdentifier: "reuseIdentifier")
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+         tableView.register(UINib(nibName: "RoomListTableViewCell", bundle: nil), forCellReuseIdentifier: "reuseIdentifier")
+       
     }
 }
 
@@ -54,15 +54,15 @@ extension RoomListTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! RoomListTableViewCell
 
         let image = UIImage (named: pictures[indexPath.row])
-//
-//        cell.imageRoom.image = image
-//        cell.userInformation.text = user_details[indexPath.row]
-//        cell.roomDescription.text = room_descriptions[indexPath.row]
-//        cell.price.text = prices[indexPath.row]
-//
+
+        cell.roomImage.image = image
+        cell.userInformation.text = user_details[indexPath.row]
+        cell.roomInformation.text = room_descriptions[indexPath.row]
+        cell.price.text = prices[indexPath.row]
+
         return cell
     }
 }
