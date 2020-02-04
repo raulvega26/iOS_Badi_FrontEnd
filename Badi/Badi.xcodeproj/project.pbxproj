@@ -28,6 +28,7 @@
 		CE5A65AE23E5FBAE00ECE4AD /* AddressResultsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65AD23E5FBAE00ECE4AD /* AddressResultsDelegate.swift */; };
 		CE5A65B123E8E58800ECE4AD /* RoomListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65AF23E8E58700ECE4AD /* RoomListTableViewCell.swift */; };
 		CE5A65B223E8E58800ECE4AD /* RoomListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A65B023E8E58700ECE4AD /* RoomListTableViewCell.xib */; };
+		CE5A65B423E9C35900ECE4AD /* DetailRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65B323E9C35900ECE4AD /* DetailRoomTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		CE5A65AD23E5FBAE00ECE4AD /* AddressResultsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResultsDelegate.swift; sourceTree = "<group>"; };
 		CE5A65AF23E8E58700ECE4AD /* RoomListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListTableViewCell.swift; sourceTree = "<group>"; };
 		CE5A65B023E8E58700ECE4AD /* RoomListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomListTableViewCell.xib; sourceTree = "<group>"; };
+		CE5A65B323E9C35900ECE4AD /* DetailRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRoomTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				CE5A659723DF542700ECE4AD /* SuggestionAddressTableViewController.swift */,
 				CE5A65A323E18E2B00ECE4AD /* RoomListTableViewController.swift */,
 				CE5A65AD23E5FBAE00ECE4AD /* AddressResultsDelegate.swift */,
+				CE5A65B323E9C35900ECE4AD /* DetailRoomTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				CE5A65AE23E5FBAE00ECE4AD /* AddressResultsDelegate.swift in Sources */,
 				CE5A656323D9BCFD00ECE4AD /* AppDelegate.swift in Sources */,
 				CE5A656523D9BCFD00ECE4AD /* SceneDelegate.swift in Sources */,
+				CE5A65B423E9C35900ECE4AD /* DetailRoomTableViewController.swift in Sources */,
 				CE5A658E23DAEA6100ECE4AD /* Interactor.swift in Sources */,
 				CE5A658A23DAE63B00ECE4AD /* Routing.swift in Sources */,
 				CE5A658C23DAE6A100ECE4AD /* LocationTableViewController.swift in Sources */,

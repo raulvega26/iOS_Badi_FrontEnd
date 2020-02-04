@@ -9,18 +9,23 @@
 import UIKit
 
 class RoomListTableViewController: UITableViewController {
+    
     private var pictures = ["room.jpeg","room2.jpg","room3.jpg","room4.jpg"]
     private var user_details = ["Raul, 25", "Irati, 25", "Didac, 23", "Joan, 25"]
     // var descriptions = ["habitacion individual", "habitacion doble", "habitacion individual", "habitacion doble"]
     private var prices = ["320 €/mes", "550 €/mes", "700 €/mes", "680 €/mes"]
     private var room_descriptions = [String]()
+    private let heightCell: CGFloat = 350
+    private var presenter: Presenter
     
-    init(rooms: Array<String>) {
+    init(rooms: Array<String>, presenter: Presenter) {
         room_descriptions = rooms
+        self.presenter = presenter
         super.init(style: .plain)
     }
     
     required init?(coder: NSCoder) {
+        self.presenter = Presenter()
         super.init(coder: coder)
     }
     
@@ -41,7 +46,7 @@ class RoomListTableViewController: UITableViewController {
 extension RoomListTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 350//Choose your custom row height
+        return heightCell
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,13 +61,19 @@ extension RoomListTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! RoomListTableViewCell
 
-        let image = UIImage (named: pictures[indexPath.row])
+        // let image = UIImage (named: pictures[indexPath.row])
 
-        cell.roomImage.image = image
+        cell.roomImage.backgroundColor = UIColor.cyan
         cell.userInformation.text = user_details[indexPath.row]
         cell.roomInformation.text = room_descriptions[indexPath.row]
         cell.price.text = prices[indexPath.row]
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        presenter.detailRoomSelected()
+        
     }
 }
