@@ -34,4 +34,11 @@ class Presenter {
         routing?.goToRoomList(rooms: rooms)
         
     }
+    
+    func detailRoomSelected() {
+        interactor?.requestDetailRoom()
+        
+        
+        routing?.goToDetailRoom()
+    }
 }
