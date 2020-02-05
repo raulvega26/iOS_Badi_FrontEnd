@@ -37,15 +37,17 @@ class Interactor {
             return singleAddress.name == addressRequest
         }
         
-        addressSelected[0].name = addressSelected[0].name.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        
         addressSelected[0].city = addressSelected[0].city.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+       
         
-        dataRetriever.retrieve(url: "http://3.82.105.143:3000/V1/rooms?city=\(addressSelected[0].city)(or-nil)&topleft_lat=\(addressSelected[0].topLeftLatitude)&btmright_lat=\(addressSelected[0].bottomRightLongitude)&topleft_long=\(addressSelected[0].topLeftLongitude)&btmright_long=\(addressSelected[0].bottomRightLongitude)", method: "GET") { (result: Result<LocationsResponse, Error>) in
+        print("http://3.82.105.143:3000/V1/rooms?city=\(addressSelected[0].city)&topleft_lat=\(addressSelected[0].topLeftLatitude)&btmright_lat=\(addressSelected[0].bottomRightLongitude)&topleft_lon=\(addressSelected[0].topLeftLongitude)&btmright_lon=\(addressSelected[0].bottomRightLongitude)")
+        
+        dataRetriever.retrieve(url: "http://3.82.105.143:3000/V1/rooms?city=\(addressSelected[0].city)&topleft_lat=\(addressSelected[0].topLeftLatitude)&btmright_lat=\(addressSelected[0].bottomRightLongitude)&topleft_lon=\(addressSelected[0].topLeftLongitude)&btmright_lon=\(addressSelected[0].bottomRightLongitude)", method: "GET") { (result: Result<RoomsResponse, Error>) in
             switch result {
                 case .success(let response):
                     DispatchQueue.main.async {
-                        self.address = response.locations
+                        self.rooms = response.rooms
+                        print("Response: \(response.rooms)")
                     }
                     
                 case .failure(let error):

@@ -10,15 +10,13 @@ import UIKit
 
 class DetailRoomTableViewController: UITableViewController {
     
-    let room: Room
+    // let room: Room
     
-    init (room: Room) {
-        self.room = room
+    init () {
         super.init(style: .plain)
     }
     
     required init?(coder: NSCoder) {
-        self.room = Room()
         super.init(coder: coder)
     }
     
