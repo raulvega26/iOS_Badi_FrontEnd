@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class RoomListTableViewController: UITableViewController {
+class RoomListTableViewController: UITableViewController, UpdateRoomsView {
     
     private let heightCell: CGFloat = 350
     private var presenter: Presenter
@@ -62,9 +62,12 @@ extension RoomListTableViewController {
         let url = URL(string: rooms[indexPath.row].photos[0].url)
         cell.roomImage.kf.setImage(with: url)
         cell.userInformation.text = rooms[indexPath.row].owner.name
+        cell.userInformation.numberOfLines = 0
         
         cell.roomInformation.text = rooms[indexPath.row].name
+        cell.roomInformation.numberOfLines = 0
         cell.price.text =  String(rooms[indexPath.row].price) +  rooms[indexPath.row].currency
+        cell.price.numberOfLines = 0
 
         return cell
     }
@@ -75,7 +78,7 @@ extension RoomListTableViewController {
         
     }
     
-    func updateData(rooms: Array<Room>) {
+    func updateRoomsData(rooms: Array<Room>) {
         self.rooms = rooms
         self.tableView.reloadData()
     }

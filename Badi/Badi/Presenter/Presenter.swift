@@ -35,7 +35,7 @@ class Presenter {
     }
     
     func updateViewRoomsList(rooms: Array<Room>) {
-        viewRoom?.updateData(rooms: rooms)
+        viewRoom?.updateRoomsData(rooms: rooms)
     }
     
     func detailRoomSelected(room: Room) {

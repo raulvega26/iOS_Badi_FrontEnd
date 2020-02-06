@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE6-bh-VWT">
-                        <rect key="frame" x="20" y="332" width="355" height="20"/>
+                        <rect key="frame" x="20" y="342" width="355" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="VuA-lN-IFs"/>
                         </constraints>
@@ -30,16 +30,16 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzQ-nv-trR">
-                        <rect key="frame" x="20" y="297" width="335" height="20"/>
+                        <rect key="frame" x="20" y="287" width="335" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="Rqz-KF-9ME"/>
+                            <constraint firstAttribute="height" constant="40" id="Rqz-KF-9ME"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lf8-ah-MKw">
-                        <rect key="frame" x="20" y="262" width="335" height="20"/>
+                        <rect key="frame" x="20" y="252" width="335" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="fSm-lh-Fwd"/>
                         </constraints>
@@ -49,7 +49,7 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="aE6-bh-VWT" secondAttribute="bottom" constant="20" id="3XN-Gt-3fT"/>
+                    <constraint firstAttribute="bottom" secondItem="aE6-bh-VWT" secondAttribute="bottom" constant="10" id="3XN-Gt-3fT"/>
                     <constraint firstItem="aE6-bh-VWT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="KJN-rh-R1B"/>
                     <constraint firstAttribute="trailingMargin" secondItem="lf8-ah-MKw" secondAttribute="trailing" constant="40" id="Nbs-w4-kCP"/>
                     <constraint firstItem="lf8-ah-MKw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="PJA-2e-X0b"/>

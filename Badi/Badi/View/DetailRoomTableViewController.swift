@@ -13,7 +13,7 @@ class DetailRoomTableViewController: UITableViewController {
     
     let room: Room
     
-    private let heightCell:CGFloat = 800
+    private let heightCell:CGFloat = 1100
     
     init (room: Room) {
         self.room = room
@@ -55,6 +55,7 @@ extension DetailRoomTableViewController {
         let urlImage = URL(string: room.photos[0].url)
         cell.imageRoom.kf.setImage(with: urlImage);
         cell.nameRoom.numberOfLines = 0
+        cell.nameRoom.preferredMaxLayoutWidth = 200
         cell.nameRoom.text = room.name
         cell.price.numberOfLines = 0
         cell.price.text = String(room.price) + " " + room.currency

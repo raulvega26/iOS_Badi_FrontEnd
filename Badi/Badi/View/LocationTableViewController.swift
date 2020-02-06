@@ -66,7 +66,5 @@ extension LocationTableViewController: UISearchResultsUpdating {
         } else {
             filtered.address = []
         }
-        
-        //filtered.posts = provider.posts.filter{ $0.title.lowercased().contains(with: searchController.searchBar.text!.lowercased()) }
     }
 }
