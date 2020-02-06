@@ -7,13 +7,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RoomListTableViewController: UITableViewController {
     
-    private var pictures = ["room.jpeg","room2.jpg","room3.jpg","room4.jpg"]
-    private var user_details = ["Raul, 25", "Irati, 25", "Didac, 23", "Joan, 25"]
-    private var prices = ["320 €/mes", "550 €/mes", "700 €/mes", "680 €/mes"]
-    private var room_descriptions = ["habitacion individual", "habitacion doble", "habitacion individual", "habitacion doble"]
     private let heightCell: CGFloat = 350
     private var presenter: Presenter
     private var rooms: Array<Room>
@@ -62,9 +59,8 @@ extension RoomListTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! RoomListTableViewCell
 
-        // let image = UIImage (named: pictures[indexPath.row])
-
-        cell.roomImage.backgroundColor = UIColor.cyan
+        let url = URL(string: rooms[indexPath.row].photos[0].url)
+        cell.roomImage.kf.setImage(with: url)
         cell.userInformation.text = rooms[indexPath.row].owner.name
         
         cell.roomInformation.text = rooms[indexPath.row].name

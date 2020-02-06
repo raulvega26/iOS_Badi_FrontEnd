@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailRoomTableViewController: UITableViewController {
     
@@ -50,7 +51,9 @@ extension DetailRoomTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! DetailRoomTableViewCell
         
-        cell.imageRoom.backgroundColor = .blue
+        
+        let urlImage = URL(string: room.photos[0].url)
+        cell.imageRoom.kf.setImage(with: urlImage);
         cell.nameRoom.numberOfLines = 0
         cell.nameRoom.text = room.name
         cell.price.numberOfLines = 0
@@ -64,7 +67,7 @@ extension DetailRoomTableViewController {
         
         cell.billsIncluded.numberOfLines = 0
         
-        cell.deposit.text = String(room.deposit) + " " + room.currency
+        cell.deposit.text = "Fianza " + String(room.deposit) + " " + room.currency
         cell.deposit.numberOfLines = 0
         cell.owner.text = room.owner.name
         cell.owner.numberOfLines = 0
