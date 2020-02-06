@@ -9,5 +9,5 @@
 import Foundation
 
 struct RoomsResponse: Codable {
-    var rooms: [Room]
+    var rooms: [Room]?
 }

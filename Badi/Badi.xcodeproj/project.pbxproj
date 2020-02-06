@@ -29,6 +29,8 @@
 		CE5A65B223E8E58800ECE4AD /* RoomListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A65B023E8E58700ECE4AD /* RoomListTableViewCell.xib */; };
 		CE5A65B423E9C35900ECE4AD /* DetailRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65B323E9C35900ECE4AD /* DetailRoomTableViewController.swift */; };
 		CE5A65B623E9DA8400ECE4AD /* RoomsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65B523E9DA8400ECE4AD /* RoomsResponse.swift */; };
+		CE5A65B923EADA1A00ECE4AD /* DetailRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65B723EADA1A00ECE4AD /* DetailRoomTableViewCell.swift */; };
+		CE5A65BA23EADA1A00ECE4AD /* DetailRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A65B823EADA1A00ECE4AD /* DetailRoomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		CE5A65B023E8E58700ECE4AD /* RoomListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomListTableViewCell.xib; sourceTree = "<group>"; };
 		CE5A65B323E9C35900ECE4AD /* DetailRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRoomTableViewController.swift; sourceTree = "<group>"; };
 		CE5A65B523E9DA8400ECE4AD /* RoomsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsResponse.swift; sourceTree = "<group>"; };
+		CE5A65B723EADA1A00ECE4AD /* DetailRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRoomTableViewCell.swift; sourceTree = "<group>"; };
+		CE5A65B823EADA1A00ECE4AD /* DetailRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailRoomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 				CE5A65A323E18E2B00ECE4AD /* RoomListTableViewController.swift */,
 				CE5A65AD23E5FBAE00ECE4AD /* AddressResultsDelegate.swift */,
 				CE5A65B323E9C35900ECE4AD /* DetailRoomTableViewController.swift */,
+				CE5A65B723EADA1A00ECE4AD /* DetailRoomTableViewCell.swift */,
+				CE5A65B823EADA1A00ECE4AD /* DetailRoomTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5A65BA23EADA1A00ECE4AD /* DetailRoomTableViewCell.xib in Resources */,
 				CE5A656F23D9BCFF00ECE4AD /* LaunchScreen.storyboard in Resources */,
 				CE5A656C23D9BCFF00ECE4AD /* Assets.xcassets in Resources */,
 				CE5A65B223E8E58800ECE4AD /* RoomListTableViewCell.xib in Resources */,
@@ -295,6 +302,7 @@
 				CE5A659C23E0635F00ECE4AD /* URLSessionDataRetriever.swift in Sources */,
 				CE5A65A623E1B0E100ECE4AD /* Room.swift in Sources */,
 				CE5A659E23E0643200ECE4AD /* Address.swift in Sources */,
+				CE5A65B923EADA1A00ECE4AD /* DetailRoomTableViewCell.swift in Sources */,
 				CE5A65AE23E5FBAE00ECE4AD /* AddressResultsDelegate.swift in Sources */,
 				CE5A656323D9BCFD00ECE4AD /* AppDelegate.swift in Sources */,
 				CE5A656523D9BCFD00ECE4AD /* SceneDelegate.swift in Sources */,

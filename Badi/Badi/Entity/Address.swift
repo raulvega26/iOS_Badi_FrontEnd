@@ -9,8 +9,8 @@
 import Foundation
 
 struct Address: Codable {
-    var name: String 
-    var city: String
+    var name: String!
+    var city: String!
     var topLeftLongitude: Double
     var topLeftLatitude: Double
     var bottomRightLongitude: Double

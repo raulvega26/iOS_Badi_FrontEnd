@@ -11,7 +11,7 @@ class Interactor {
     var presenter: Presenter?
     private let dataRetriever = URLSessionDataRetriever()
     var address = [Address]()
-    var rooms = [Room]()
+    var roomsReceived = [Room]()
     
     
     func requestAddress(address: String){
@@ -31,33 +31,34 @@ class Interactor {
         }
     }
     
-    func requestRooms(addressRequest: String)  -> Array<String>{
+    func requestRooms(addressRequest: String)  -> Array<Room>{
         
         var addressSelected = address.filter { (singleAddress) -> Bool in
             return singleAddress.name == addressRequest
         }
         
-        addressSelected[0].city = addressSelected[0].city.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        addressSelected[0].city = addressSelected[0].city.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
        
+        let addressCity = addressSelected[0].city!
+            print("http://3.82.105.143:3000/V1/rooms?city=\(addressCity)&topleft_lat=\(addressSelected[0].topLeftLatitude)&btmright_lat=\(addressSelected[0].bottomRightLongitude)&topleft_lon=\(addressSelected[0].topLeftLongitude)&btmright_lon=\(addressSelected[0].bottomRightLongitude)")
         
-        print("http://3.82.105.143:3000/V1/rooms?city=\(addressSelected[0].city)&topleft_lat=\(addressSelected[0].topLeftLatitude)&btmright_lat=\(addressSelected[0].bottomRightLongitude)&topleft_lon=\(addressSelected[0].topLeftLongitude)&btmright_lon=\(addressSelected[0].bottomRightLongitude)")
-        
-        dataRetriever.retrieve(url: "http://3.82.105.143:3000/V1/rooms?city=\(addressSelected[0].city)&topleft_lat=\(addressSelected[0].topLeftLatitude)&btmright_lat=\(addressSelected[0].bottomRightLongitude)&topleft_lon=\(addressSelected[0].topLeftLongitude)&btmright_lon=\(addressSelected[0].bottomRightLongitude)", method: "GET") { (result: Result<RoomsResponse, Error>) in
+        dataRetriever.retrieve(url: "http://3.82.105.143:3000/V1/rooms?city=\(addressCity)&topleft_lat=\(addressSelected[0].topLeftLatitude)&btmright_lat=\(addressSelected[0].bottomRightLongitude)&topleft_lon=\(addressSelected[0].topLeftLongitude)&btmright_lon=\(addressSelected[0].bottomRightLongitude)", method: "GET") { (result: Result<RoomsResponse, Error>) in
             switch result {
                 case .success(let response):
                     DispatchQueue.main.async {
-                        self.rooms = response.rooms
-                        print("Response: \(response.rooms)")
+                        if response.rooms != nil {
+                            self.roomsReceived = response.rooms!
+                        }
+                        self.presenter?.updateViewRoomsList(rooms: self.roomsReceived)
                     }
                     
                 case .failure(let error):
                     print(error)
             }
         }
-        
-        let rooms = ["room A", "room B", "room C", "room D"]
-        
-        return rooms
+        // let rooms = ["room A", "room B", "room C", "room D"]
+        print("rooms received: \(self.roomsReceived.count)")
+        return roomsReceived
     }
     
     

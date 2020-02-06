@@ -12,6 +12,8 @@ class DetailRoomTableViewController: UITableViewController {
     
     // let room: Room
     
+    private let heightCell:CGFloat = 800
+    
     init () {
         super.init(style: .plain)
     }
@@ -22,12 +24,17 @@ class DetailRoomTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        tableView.register(UINib(nibName: "DetailRoomTableViewCell", bundle: nil), forCellReuseIdentifier: "reuseIdentifier")
     }
 }
 
 
 extension DetailRoomTableViewController {
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return heightCell
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -39,9 +46,10 @@ extension DetailRoomTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! DetailRoomTableViewCell
         
-        cell.textLabel?.text = "arriba a detail"
+        cell.imageRoom.backgroundColor = .blue
+        cell.nameRoom.text = "habitación grande"
         
         return cell
     }

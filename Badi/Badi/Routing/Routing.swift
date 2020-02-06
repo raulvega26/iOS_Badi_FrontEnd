@@ -29,7 +29,7 @@ class Routing {
         suggestionFilterController.address = addressesArray
     }
     
-    func goToRoomList(rooms: Array<String>) {
+    func goToRoomList(rooms: Array<Room>) {
         let roomList = RoomListTableViewController(rooms: rooms, presenter: presenter)
         navigationController?.show(roomList, sender: true)
     }
