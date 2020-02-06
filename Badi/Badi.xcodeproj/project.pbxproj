@@ -10,6 +10,7 @@
 		40680EA9A8A0BF6ED5D8CA52 /* Pods_Badi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868EB047B7F7DC685FE6EE58 /* Pods_Badi.framework */; };
 		A2AFADA29A5BB6BB3986BE87 /* Pods_BadiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30358E85B383391FD18A7C6 /* Pods_BadiTests.framework */; };
 		CE56317A23EC7ED700842AD8 /* UpdateRoomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56317923EC7ED700842AD8 /* UpdateRoomsView.swift */; };
+		CE56317C23EC880400842AD8 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56317B23EC880400842AD8 /* Thread.swift */; };
 		CE5A656323D9BCFD00ECE4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A656223D9BCFD00ECE4AD /* AppDelegate.swift */; };
 		CE5A656523D9BCFD00ECE4AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A656423D9BCFD00ECE4AD /* SceneDelegate.swift */; };
 		CE5A656A23D9BCFD00ECE4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5A656823D9BCFD00ECE4AD /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		BF55F1885F50F35E3CE3CC0F /* Pods-BadiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadiTests.debug.xcconfig"; path = "Target Support Files/Pods-BadiTests/Pods-BadiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBC151C3F04F0A46E6547842 /* Pods-Badi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badi.release.xcconfig"; path = "Target Support Files/Pods-Badi/Pods-Badi.release.xcconfig"; sourceTree = "<group>"; };
 		CE56317923EC7ED700842AD8 /* UpdateRoomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoomsView.swift; sourceTree = "<group>"; };
+		CE56317B23EC880400842AD8 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		CE5A655F23D9BCFD00ECE4AD /* Badi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5A656223D9BCFD00ECE4AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5A656423D9BCFD00ECE4AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,13 +126,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		CE56317823EC7E8B00842AD8 /* DelegatesProject */ = {
+		CE56317823EC7E8B00842AD8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				CE5A65AD23E5FBAE00ECE4AD /* AddressResultsDelegate.swift */,
 				CE56317923EC7ED700842AD8 /* UpdateRoomsView.swift */,
+				CE56317B23EC880400842AD8 /* Thread.swift */,
 			);
-			path = DelegatesProject;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		CE5A655623D9BCFD00ECE4AD = {
@@ -163,7 +166,7 @@
 				CE5A658723DAE51400ECE4AD /* Presenter */,
 				CE5A658623DAE4FF00ECE4AD /* Entity */,
 				CE5A658823DAE51B00ECE4AD /* Routing */,
-				CE56317823EC7E8B00842AD8 /* DelegatesProject */,
+				CE56317823EC7E8B00842AD8 /* Utils */,
 				CE5A656823D9BCFD00ECE4AD /* Main.storyboard */,
 				CE5A656B23D9BCFF00ECE4AD /* Assets.xcassets */,
 				CE5A656D23D9BCFF00ECE4AD /* LaunchScreen.storyboard */,
@@ -414,6 +417,7 @@
 				CE5A659E23E0643200ECE4AD /* Address.swift in Sources */,
 				CE5A65B923EADA1A00ECE4AD /* DetailRoomTableViewCell.swift in Sources */,
 				CE5A65AE23E5FBAE00ECE4AD /* AddressResultsDelegate.swift in Sources */,
+				CE56317C23EC880400842AD8 /* Thread.swift in Sources */,
 				CE56317A23EC7ED700842AD8 /* UpdateRoomsView.swift in Sources */,
 				CE5A656323D9BCFD00ECE4AD /* AppDelegate.swift in Sources */,
 				CE5A656523D9BCFD00ECE4AD /* SceneDelegate.swift in Sources */,

@@ -61,7 +61,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBt-Px-j51">
-                        <rect key="frame" x="40" y="418" width="115" height="25"/>
+                        <rect key="frame" x="40" y="418" width="315" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="C1S-2p-vJl"/>
                         </constraints>
@@ -166,7 +166,7 @@
                     <constraint firstItem="KaJ-t4-PpS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mTa-1Q-WR5"/>
                     <constraint firstItem="kVQ-p2-8KV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="nWG-8P-ejk"/>
                     <constraint firstItem="PFb-xP-zOu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="oX3-An-Fod"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="aBt-Px-j51" secondAttribute="trailing" constant="240" id="r4P-Ua-oF7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="aBt-Px-j51" secondAttribute="trailing" constant="40" id="r4P-Ua-oF7"/>
                     <constraint firstItem="p4B-X9-eat" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="rUS-yb-c2H"/>
                     <constraint firstAttribute="trailingMargin" secondItem="5ak-8k-1fW" secondAttribute="trailing" constant="40" id="rsN-84-yXB"/>
                     <constraint firstAttribute="trailingMargin" secondItem="zZ9-sG-XPm" secondAttribute="trailing" constant="40" id="wdJ-1p-rUj"/>
