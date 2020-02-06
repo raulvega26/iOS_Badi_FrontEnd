@@ -75,7 +75,7 @@ extension RoomListTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        presenter.detailRoomSelected()
+        presenter.detailRoomSelected(room: rooms[indexPath.row])
         
     }
     

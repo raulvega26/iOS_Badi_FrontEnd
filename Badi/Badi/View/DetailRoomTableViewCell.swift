@@ -12,7 +12,17 @@ class DetailRoomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imageRoom: UIImageView!
     @IBOutlet weak var nameRoom: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var billsIncluded: UILabel!
+    @IBOutlet weak var deposit: UILabel!
+    @IBOutlet weak var owner: UILabel!
     
+    @IBOutlet weak var roomSize: UILabel!
+    
+    @IBOutlet weak var propertySize: UILabel!
+    @IBOutlet weak var roomDescription: UILabel!
+    
+    @IBOutlet weak var place: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

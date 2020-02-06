@@ -34,10 +34,8 @@ class Routing {
         navigationController?.show(roomList, sender: true)
     }
     
-    func goToDetailRoom() {
-        
-        
-        let detailRoom = DetailRoomTableViewController()
+    func goToDetailRoom(room: Room) {
+        let detailRoom = DetailRoomTableViewController(room: room)
         navigationController?.show(detailRoom, sender: true)
     }
 }

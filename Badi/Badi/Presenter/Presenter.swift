@@ -38,10 +38,9 @@ class Presenter {
         viewRoom?.updateData(rooms: rooms)
     }
     
-    func detailRoomSelected() {
+    func detailRoomSelected(room: Room) {
         interactor?.requestDetailRoom()
         
-        
-        routing?.goToDetailRoom()
+        routing?.goToDetailRoom(room: room)
     }
 }
