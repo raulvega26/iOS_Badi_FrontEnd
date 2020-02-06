@@ -22,7 +22,7 @@ struct URLSessionDataRetriever: DataRetriever {
                 let json = try JSONDecoder().decode(T.self, from: d)
                 completionBlock(Result.success(json))
             } catch {
-                completionBlock(Result.failure(NSError(domain: "Badi.URLSessionDataRetriever.error", code: 500, userInfo: ["Can't reach server":"Currently it is impossible to reach the server, try again later"])))
+                completionBlock(Result.failure(NSError(domain: "Badi.URLSessionDataRetriever.error", code: 0, userInfo: ["Error: ": error])))
             }
         }
         task.resume()

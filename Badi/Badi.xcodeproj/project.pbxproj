@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40680EA9A8A0BF6ED5D8CA52 /* Pods_Badi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868EB047B7F7DC685FE6EE58 /* Pods_Badi.framework */; };
+		A2AFADA29A5BB6BB3986BE87 /* Pods_BadiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30358E85B383391FD18A7C6 /* Pods_BadiTests.framework */; };
+		CE56317A23EC7ED700842AD8 /* UpdateRoomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56317923EC7ED700842AD8 /* UpdateRoomsView.swift */; };
+		CE56317C23EC880400842AD8 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56317B23EC880400842AD8 /* Thread.swift */; };
 		CE5A656323D9BCFD00ECE4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A656223D9BCFD00ECE4AD /* AppDelegate.swift */; };
 		CE5A656523D9BCFD00ECE4AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A656423D9BCFD00ECE4AD /* SceneDelegate.swift */; };
 		CE5A656A23D9BCFD00ECE4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5A656823D9BCFD00ECE4AD /* Main.storyboard */; };
@@ -29,6 +33,8 @@
 		CE5A65B223E8E58800ECE4AD /* RoomListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A65B023E8E58700ECE4AD /* RoomListTableViewCell.xib */; };
 		CE5A65B423E9C35900ECE4AD /* DetailRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65B323E9C35900ECE4AD /* DetailRoomTableViewController.swift */; };
 		CE5A65B623E9DA8400ECE4AD /* RoomsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65B523E9DA8400ECE4AD /* RoomsResponse.swift */; };
+		CE5A65B923EADA1A00ECE4AD /* DetailRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A65B723EADA1A00ECE4AD /* DetailRoomTableViewCell.swift */; };
+		CE5A65BA23EADA1A00ECE4AD /* DetailRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A65B823EADA1A00ECE4AD /* DetailRoomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		868EB047B7F7DC685FE6EE58 /* Pods_Badi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Badi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		913F449958E9B3186613D56E /* Pods-BadiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadiTests.release.xcconfig"; path = "Target Support Files/Pods-BadiTests/Pods-BadiTests.release.xcconfig"; sourceTree = "<group>"; };
+		B30358E85B383391FD18A7C6 /* Pods_BadiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF55F1885F50F35E3CE3CC0F /* Pods-BadiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadiTests.debug.xcconfig"; path = "Target Support Files/Pods-BadiTests/Pods-BadiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBC151C3F04F0A46E6547842 /* Pods-Badi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badi.release.xcconfig"; path = "Target Support Files/Pods-Badi/Pods-Badi.release.xcconfig"; sourceTree = "<group>"; };
+		CE56317923EC7ED700842AD8 /* UpdateRoomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoomsView.swift; sourceTree = "<group>"; };
+		CE56317B23EC880400842AD8 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		CE5A655F23D9BCFD00ECE4AD /* Badi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5A656223D9BCFD00ECE4AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5A656423D9BCFD00ECE4AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +81,9 @@
 		CE5A65B023E8E58700ECE4AD /* RoomListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomListTableViewCell.xib; sourceTree = "<group>"; };
 		CE5A65B323E9C35900ECE4AD /* DetailRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRoomTableViewController.swift; sourceTree = "<group>"; };
 		CE5A65B523E9DA8400ECE4AD /* RoomsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsResponse.swift; sourceTree = "<group>"; };
+		CE5A65B723EADA1A00ECE4AD /* DetailRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRoomTableViewCell.swift; sourceTree = "<group>"; };
+		CE5A65B823EADA1A00ECE4AD /* DetailRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailRoomTableViewCell.xib; sourceTree = "<group>"; };
+		F079DC1F79A95CEFCDB7F4D5 /* Pods-Badi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badi.debug.xcconfig"; path = "Target Support Files/Pods-Badi/Pods-Badi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40680EA9A8A0BF6ED5D8CA52 /* Pods_Badi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,18 +99,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AFADA29A5BB6BB3986BE87 /* Pods_BadiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AE62D90276A557DE21F04D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				868EB047B7F7DC685FE6EE58 /* Pods_Badi.framework */,
+				B30358E85B383391FD18A7C6 /* Pods_BadiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		873ACA31EF26A3CBF8502108 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F079DC1F79A95CEFCDB7F4D5 /* Pods-Badi.debug.xcconfig */,
+				CBC151C3F04F0A46E6547842 /* Pods-Badi.release.xcconfig */,
+				BF55F1885F50F35E3CE3CC0F /* Pods-BadiTests.debug.xcconfig */,
+				913F449958E9B3186613D56E /* Pods-BadiTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE56317823EC7E8B00842AD8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A65AD23E5FBAE00ECE4AD /* AddressResultsDelegate.swift */,
+				CE56317923EC7ED700842AD8 /* UpdateRoomsView.swift */,
+				CE56317B23EC880400842AD8 /* Thread.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		CE5A655623D9BCFD00ECE4AD = {
 			isa = PBXGroup;
 			children = (
 				CE5A656123D9BCFD00ECE4AD /* Badi */,
 				CE5A657823D9BD0000ECE4AD /* BadiTests */,
 				CE5A656023D9BCFD00ECE4AD /* Products */,
+				873ACA31EF26A3CBF8502108 /* Pods */,
+				1AE62D90276A557DE21F04D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +166,7 @@
 				CE5A658723DAE51400ECE4AD /* Presenter */,
 				CE5A658623DAE4FF00ECE4AD /* Entity */,
 				CE5A658823DAE51B00ECE4AD /* Routing */,
+				CE56317823EC7E8B00842AD8 /* Utils */,
 				CE5A656823D9BCFD00ECE4AD /* Main.storyboard */,
 				CE5A656B23D9BCFF00ECE4AD /* Assets.xcassets */,
 				CE5A656D23D9BCFF00ECE4AD /* LaunchScreen.storyboard */,
@@ -141,8 +192,9 @@
 				CE5A65B023E8E58700ECE4AD /* RoomListTableViewCell.xib */,
 				CE5A659723DF542700ECE4AD /* SuggestionAddressTableViewController.swift */,
 				CE5A65A323E18E2B00ECE4AD /* RoomListTableViewController.swift */,
-				CE5A65AD23E5FBAE00ECE4AD /* AddressResultsDelegate.swift */,
 				CE5A65B323E9C35900ECE4AD /* DetailRoomTableViewController.swift */,
+				CE5A65B723EADA1A00ECE4AD /* DetailRoomTableViewCell.swift */,
+				CE5A65B823EADA1A00ECE4AD /* DetailRoomTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE5A657E23D9BD0000ECE4AD /* Build configuration list for PBXNativeTarget "Badi" */;
 			buildPhases = (
+				48F7B7A7DB77D276992301DB /* [CP] Check Pods Manifest.lock */,
 				CE5A655B23D9BCFD00ECE4AD /* Sources */,
 				CE5A655C23D9BCFD00ECE4AD /* Frameworks */,
 				CE5A655D23D9BCFD00ECE4AD /* Resources */,
+				19E93DFF120E890004681DDD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +262,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE5A658123D9BD0000ECE4AD /* Build configuration list for PBXNativeTarget "BadiTests" */;
 			buildPhases = (
+				710CC04F115284BCD0D07746 /* [CP] Check Pods Manifest.lock */,
 				CE5A657123D9BD0000ECE4AD /* Sources */,
 				CE5A657223D9BD0000ECE4AD /* Frameworks */,
 				CE5A657323D9BD0000ECE4AD /* Resources */,
@@ -265,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5A65BA23EADA1A00ECE4AD /* DetailRoomTableViewCell.xib in Resources */,
 				CE5A656F23D9BCFF00ECE4AD /* LaunchScreen.storyboard in Resources */,
 				CE5A656C23D9BCFF00ECE4AD /* Assets.xcassets in Resources */,
 				CE5A65B223E8E58800ECE4AD /* RoomListTableViewCell.xib in Resources */,
@@ -281,6 +337,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19E93DFF120E890004681DDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Badi/Pods-Badi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Badi/Pods-Badi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Badi/Pods-Badi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48F7B7A7DB77D276992301DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Badi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		710CC04F115284BCD0D07746 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BadiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE5A655B23D9BCFD00ECE4AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -295,7 +415,10 @@
 				CE5A659C23E0635F00ECE4AD /* URLSessionDataRetriever.swift in Sources */,
 				CE5A65A623E1B0E100ECE4AD /* Room.swift in Sources */,
 				CE5A659E23E0643200ECE4AD /* Address.swift in Sources */,
+				CE5A65B923EADA1A00ECE4AD /* DetailRoomTableViewCell.swift in Sources */,
 				CE5A65AE23E5FBAE00ECE4AD /* AddressResultsDelegate.swift in Sources */,
+				CE56317C23EC880400842AD8 /* Thread.swift in Sources */,
+				CE56317A23EC7ED700842AD8 /* UpdateRoomsView.swift in Sources */,
 				CE5A656323D9BCFD00ECE4AD /* AppDelegate.swift in Sources */,
 				CE5A656523D9BCFD00ECE4AD /* SceneDelegate.swift in Sources */,
 				CE5A65B623E9DA8400ECE4AD /* RoomsResponse.swift in Sources */,
@@ -460,6 +583,7 @@
 		};
 		CE5A657F23D9BD0000ECE4AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F079DC1F79A95CEFCDB7F4D5 /* Pods-Badi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -477,6 +601,7 @@
 		};
 		CE5A658023D9BD0000ECE4AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBC151C3F04F0A46E6547842 /* Pods-Badi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -494,6 +619,7 @@
 		};
 		CE5A658223D9BD0000ECE4AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF55F1885F50F35E3CE3CC0F /* Pods-BadiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +641,7 @@
 		};
 		CE5A658323D9BD0000ECE4AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 913F449958E9B3186613D56E /* Pods-BadiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

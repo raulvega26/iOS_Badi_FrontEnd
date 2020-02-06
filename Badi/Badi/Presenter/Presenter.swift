@@ -20,10 +20,10 @@ class Presenter {
         
         interactor!.requestAddress(address: request)
         
-        let direccions = (interactor?.address.filter{ $0.name.lowercased().contains(request.lowercased())
+        let direccions = (interactor?.address.filter{ ($0.name.lowercased().contains(request.lowercased()))
             })!
         
-        stringAddresses = direccions.map { $0.name }
+        stringAddresses = direccions.map { $0.name}
         
         routing?.suggestionAddress(addressesArray: stringAddresses , suggestionFilterController: suggestionFiltered)
     }
@@ -32,13 +32,15 @@ class Presenter {
         let rooms = (interactor?.requestRooms(addressRequest: address))!
         
         routing?.goToRoomList(rooms: rooms)
-        
     }
     
-    func detailRoomSelected() {
+    func updateViewRoomsList(rooms: Array<Room>) {
+        viewRoom?.updateRoomsData(rooms: rooms)
+    }
+    
+    func detailRoomSelected(room: Room) {
         interactor?.requestDetailRoom()
         
-        
-        routing?.goToDetailRoom()
+        routing?.goToDetailRoom(room: room)
     }
 }
